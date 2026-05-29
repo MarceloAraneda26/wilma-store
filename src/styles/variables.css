@@ -1,0 +1,40 @@
+/* ══════════════════════════════════════════
+   src/styles/variables.css
+   Tokens de diseño de Wilma Store
+   ══════════════════════════════════════════ */
+
+:root {
+  /* ── Paleta ── */
+  --cream:       #FBF5EE;
+  --cream-d:     #F0E6D8;
+  --white:       #FFFFFF;
+  --lilac:       #D4B8E8;
+  --lilac-d:     #9B72C8;
+  --lilac-l:     #EFE4F8;
+  --pink:        #F2C8D8;
+  --pink-d:      #D48EA8;
+  --peach:       #F5D4B8;
+  --mint:        #C2E0D2;
+  --text:        #2D1E1E;
+  --text-s:      #7A6060;
+  --border:      rgba(180,140,200,0.35);
+  --wa:          #25D366;
+
+  /* ── Sombras ── */
+  --shadow:      0 4px 24px rgba(140,80,160,0.10);
+  --shadow-h:    0 8px 32px rgba(140,80,160,0.18);
+  --shadow-card: 0 2px 12px rgba(140,80,160,0.08);
+
+  /* ── Tipografía ── */
+  --font-serif:  'Syne', sans-serif;
+  --font-sans:   'Nunito', sans-serif;
+
+  /* ── Radios ── */
+  --radius:      16px;
+  --radius-sm:   10px;
+  --radius-pill: 999px;
+
+  /* ── Transiciones ── */
+  --trans:       all 0.25s ease;
+  --trans-slow:  all 0.4s ease;
+}

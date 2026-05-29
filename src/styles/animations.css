@@ -1,0 +1,46 @@
+/* ══════════════════════════════════════════
+   src/styles/animations.css
+   Keyframes reutilizables
+   ══════════════════════════════════════════ */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+  50%       { transform: translateY(-12px) rotate(var(--rot, 0deg)); }
+}
+
+@keyframes floatAlt {
+  0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+  50%       { transform: translateY(-10px) rotate(var(--rot, 0deg)); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50%       { opacity: 0.9; transform: scale(1.2); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95) translateY(16px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Clases utilitarias */
+.anim-float     { animation: float     5s ease-in-out infinite; }
+.anim-float-alt { animation: floatAlt  6s ease-in-out infinite reverse; }
+.anim-float-slow{ animation: float     8s ease-in-out infinite; }
+.anim-fade-up   { animation: fadeInUp  0.5s ease forwards; }
+.anim-scale-in  { animation: scaleIn   0.35s cubic-bezier(.22,.61,.36,1) forwards; }
