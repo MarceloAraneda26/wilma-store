@@ -5,7 +5,7 @@
 // Para agregar sticker: pon el PNG en /public/stickers/ y referencia acá.
 // ══════════════════════════════════════════
 
-export const WHATSAPP_NUMBER = '56912345678' // ← Número de Wilma (sin + ni espacios)
+export const WHATSAPP_NUMBER = '56932489946' // ← Número de Wilma (sin + ni espacios)
 
 export const CATEGORIES = [
   { id: 'all',       label: 'Todos'      },
