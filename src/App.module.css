@@ -273,3 +273,119 @@
   .tr, .br        { display: none; }
   .customSteps    { grid-template-columns: 1fr; }
 }
+
+/* ══════════════════════════════════════════
+   NUEVOS ESTILOS — Gatitos estratégicos
+   ══════════════════════════════════════════ */
+
+/* ── Mascota principal en hero (imagen real) ── */
+.catMainImg {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(4px 8px 16px rgba(45,30,30,0.18));
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Sticker pequeño sobre el frame ── */
+.stickerOnCat {
+  position: absolute; z-index: 10;
+  width: 70px; top: -30px; right: -35px;
+  filter: drop-shadow(1px 2px 6px rgba(45,30,30,0.15));
+  animation: float 4s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+
+/* ── Título con gatito al lado ── */
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.titleSticker {
+  width: clamp(50px, 6vw, 80px);
+  object-fit: contain;
+  filter: drop-shadow(1px 3px 6px rgba(45,30,30,0.12));
+  animation: float 5s ease-in-out infinite reverse;
+  flex-shrink: 0;
+}
+
+/* ── Separador de gatitos caminando ── */
+.catDivider {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 20px clamp(20px,4vw,60px) 0;
+  overflow: hidden;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  pointer-events: none;
+}
+.dividerCat {
+  object-fit: contain;
+  filter: drop-shadow(1px 3px 8px rgba(45,30,30,0.10));
+  opacity: 0.85;
+}
+.dc1 { width: clamp(55px,5vw,80px);  animation-delay: 0s; }
+.dc2 { width: clamp(65px,6vw,95px);  animation-delay: 0.8s; }
+.dc3 { width: clamp(60px,5.5vw,88px);animation-delay: 1.4s; }
+.dc4 { width: clamp(55px,5vw,80px);  animation-delay: 0.4s; }
+.dc5 { width: clamp(50px,4.5vw,72px);animation-delay: 1s; }
+
+/* ── Sticker lateral izquierdo en catálogo ── */
+.sectionStickerLeft {
+  position: absolute;
+  left: clamp(10px, 2vw, 30px);
+  bottom: 15%;
+  width: clamp(60px, 6vw, 90px);
+  opacity: 0.75;
+  filter: drop-shadow(2px 4px 10px rgba(45,30,30,0.10));
+  animation: float 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ── Sticker extra en sección personalizado ── */
+.customStickerTopLeft {
+  position: absolute;
+  top: -20px; left: 30px;
+  width: clamp(60px, 6vw, 90px);
+  filter: drop-shadow(1px 3px 8px rgba(0,0,0,0.15));
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none; z-index: 10;
+  opacity: 0.85;
+}
+
+/* ── Footer con imagen del gato ── */
+.footerLogoRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.footerCatImg {
+  width: 48px; height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(1px 2px 6px rgba(0,0,0,0.3));
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  padding: 4px;
+}
+.footerStickerLeft {
+  position: absolute;
+  bottom: 20px; left: 30px;
+  width: 70px; opacity: 0.12;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .catDivider { gap: 8px; }
+  .dc3, .dc5  { display: none; }
+  .titleSticker { display: none; }
+  .sectionStickerLeft { display: none; }
+  .customStickerTopLeft { display: none; }
+}

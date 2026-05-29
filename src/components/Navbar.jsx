@@ -14,9 +14,16 @@ export default function Navbar() {
 
   return (
     <nav className={styles.nav}>
-      {/* Brand */}
+      {/* Brand con 01_frente_sentado como ícono */}
       <div className={styles.brand}>
-        <CatLogo />
+        <div className={styles.logoIcon}>
+          <img
+            src="stickers/01_frente_sentado.png"
+            alt="Wilma Store"
+            className={styles.logoImg}
+            onError={e => { e.currentTarget.style.display='none' }}
+          />
+        </div>
         <div className={styles.logoText}>
           Wilma <span>Store</span>
         </div>
@@ -48,25 +55,5 @@ export default function Navbar() {
         {menuOpen ? '✕' : '☰'}
       </button>
     </nav>
-  )
-}
-
-function CatLogo() {
-  return (
-    <svg width="32" height="32" viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="40" cy="72" rx="23" ry="12" fill="#E8904A"/>
-      <circle  cx="40" cy="40" r="23"           fill="#E8904A"/>
-      <polygon points="25,21 18,8 31,20"         fill="#E8904A"/>
-      <polygon points="27,19 21,10 30,19"        fill="#F5C090"/>
-      <polygon points="55,21 62,8 49,20"         fill="#E8904A"/>
-      <polygon points="53,19 59,10 50,19"        fill="#F5C090"/>
-      <circle  cx="33" cy="38" r="5"             fill="#2D1A0A"/>
-      <circle  cx="47" cy="38" r="5"             fill="#2D1A0A"/>
-      <circle  cx="34" cy="37" r="2"             fill="white"/>
-      <circle  cx="48" cy="37" r="2"             fill="white"/>
-      <path d="M37,47 L43,47 L40,51 Z"           fill="#E87070"/>
-      <path d="M36,51 Q40,55 44,51" fill="none" stroke="#8B4513" strokeWidth="1.5" strokeLinecap="round"/>
-      <path d="M62,78 Q78,68 74,52 Q71,40 66,50" fill="none" stroke="#E8904A" strokeWidth="6" strokeLinecap="round"/>
-    </svg>
   )
 }
