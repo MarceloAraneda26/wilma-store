@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className={styles.brand}>
         <div className={styles.logoIcon}>
           <img
-            src="stickers/01_frente_sentado.png"
+            src="stickers/01_frente_sentado_colmillo.png"
             alt="Wilma Store"
             className={styles.logoImg}
             onError={e => { e.currentTarget.style.display='none' }}

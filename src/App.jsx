@@ -13,13 +13,13 @@ import './styles/animations.css'
 import styles from './App.module.css'
 
 const MARQUEE_STICKERS = [
-  '02_perfil_sentado',
-  '06_estirandose',
-  '09_parado',
-  '02_perfil_sentado',
-  '06_estirandose',
-  '09_parado',
-  '02_perfil_sentado',
+  '02_perfil_sentado_colmillo',
+  '06_estirandose_colmillo',
+  '09_parado_colmillo',
+  '02_perfil_sentado_colmillo',
+  '06_estirandose_colmillo',
+  '09_parado_colmillo',
+  '02_perfil_sentado_colmillo',
 ]
 
 export default function App() {
@@ -37,13 +37,11 @@ export default function App() {
       {/* ══════════ HERO ══════════ */}
       <header className={styles.hero} id="inicio">
 
-        {/* Stickers flotantes en esquinas */}
-        <img src="stickers/13_jugando_con_ovillo.png" className={`${styles.stickerHero} ${styles.tl} anim-float`}     alt="" onError={e => e.currentTarget.remove()} />
-        <img src="stickers/08_saludando.png"          className={`${styles.stickerHero} ${styles.tr} anim-float-alt`} alt="" onError={e => e.currentTarget.remove()} />
-        <img src="stickers/05_durmiendo.png"          className={`${styles.stickerHero} ${styles.bl} anim-float-slow`}alt="" onError={e => e.currentTarget.remove()} />
-        <img src="stickers/03_caminando_lateral.png"  className={`${styles.stickerHero} ${styles.br} anim-float`}     alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/13_ovillo_colmillo.png"          className={`${styles.stickerHero} ${styles.tl} anim-float`}     alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/08_saludando_colmillo.png"       className={`${styles.stickerHero} ${styles.tr} anim-float-alt`} alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/05_durmiendo_colmillo.png"       className={`${styles.stickerHero} ${styles.bl} anim-float-slow`}alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/03_caminando_lateral_colmillo.png" className={`${styles.stickerHero} ${styles.br} anim-float`}   alt="" onError={e => e.currentTarget.remove()} />
 
-        {/* Texto hero */}
         <div className={styles.heroContent}>
           <div className={styles.heroTag}>✦ Hecho a mano con amor</div>
           <h1 className={styles.heroTitle}>
@@ -59,27 +57,14 @@ export default function App() {
           </div>
         </div>
 
-        {/* ── Mascota principal: 01_frente_sentado ── */}
+        {/* Mascota principal */}
         <div className={styles.heroCat}>
           <div className={styles.catFrame}>
             <span className={`${styles.sparkle} ${styles.s1}`}>✦</span>
             <span className={`${styles.sparkle} ${styles.s2}`}>✦</span>
             <span className={`${styles.sparkle} ${styles.s3}`}>✦</span>
-
-            {/* Sticker pequeño sobre el frame */}
-            <img
-              src="stickers/08_saludando.png"
-              className={styles.stickerOnCat}
-              alt=""
-              onError={e => e.currentTarget.remove()}
-            />
-
-            {/* ÍCONO PRINCIPAL → 01_frente_sentado */}
-            <img
-              src="stickers/01_frente_sentado.png"
-              alt="Wilma Store mascota"
-              className={styles.catMainImg}
-            />
+            <img src="stickers/08_saludando_colmillo.png" className={styles.stickerOnCat} alt="" onError={e => e.currentTarget.remove()} />
+            <img src="stickers/01_frente_sentado_colmillo.png" alt="Wilma Store mascota" className={styles.catMainImg} />
           </div>
         </div>
       </header>
@@ -92,12 +77,7 @@ export default function App() {
               {['HECHO A MANO', 'CROCHET ARTESANAL', 'ENVÍOS A TODO CHILE', 'PIEZAS ÚNICAS', 'DISEÑOS EXCLUSIVOS', 'PIDE EL TUYO', 'WILMA STORE'].map((txt, j) => (
                 <span key={j} className={styles.marqueeItem}>
                   {txt}
-                  <img
-                    src={`stickers/${MARQUEE_STICKERS[j]}.png`}
-                    className={styles.marqueeMini}
-                    alt=""
-                    onError={e => { e.currentTarget.style.display = 'none' }}
-                  />
+                  <img src={`stickers/${MARQUEE_STICKERS[j]}.png`} className={styles.marqueeMini} alt="" onError={e => { e.currentTarget.style.display = 'none' }} />
                 </span>
               ))}
             </div>
@@ -105,34 +85,30 @@ export default function App() {
         </div>
       </div>
 
-      {/* ══════════ SEPARADOR CON GATITOS ══════════ */}
+      {/* ══════════ SEPARADOR GATITOS ══════════ */}
       <div className={styles.catDivider}>
-        <img src="stickers/12_caminando_de_frente.png" className={`${styles.dividerCat} ${styles.dc1} anim-float-slow`} alt="" onError={e => e.currentTarget.remove()} />
-        <img src="stickers/06_estirandose.png"         className={`${styles.dividerCat} ${styles.dc2} anim-float`}      alt="" onError={e => e.currentTarget.remove()} />
-        <img src="stickers/14_en_caja.png"             className={`${styles.dividerCat} ${styles.dc3} anim-float-alt`}  alt="" onError={e => e.currentTarget.remove()} />
-        <img src="stickers/09_parado.png"              className={`${styles.dividerCat} ${styles.dc4} anim-float-slow`} alt="" onError={e => e.currentTarget.remove()} />
-        <img src="stickers/11_desde_arriba.png"        className={`${styles.dividerCat} ${styles.dc5} anim-float`}      alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/12_caminando_colmillo.png"        className={`${styles.dividerCat} ${styles.dc1} anim-float-slow`} alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/06_estirandose_colmillo.png"      className={`${styles.dividerCat} ${styles.dc2} anim-float`}      alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/14_cajita_colmillo.png"           className={`${styles.dividerCat} ${styles.dc3} anim-float-alt`}  alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/09_parado_colmillo.png"           className={`${styles.dividerCat} ${styles.dc4} anim-float-slow`} alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/11_espalda_colmillo.png"          className={`${styles.dividerCat} ${styles.dc5} anim-float`}      alt="" onError={e => e.currentTarget.remove()} />
       </div>
 
       {/* ══════════ CATÁLOGO ══════════ */}
       <section id="catalogo" className={styles.catalogSection}>
-        {/* Gatito lateral derecho */}
-        <img src="stickers/04_comiendo.png"    className={styles.sectionStickerRight} alt="" onError={e => e.currentTarget.remove()} />
-        {/* Gatito lateral izquierdo */}
-        <img src="stickers/10_mirando_atras.png" className={styles.sectionStickerLeft} alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/04_comiendo_colmillo.png"   className={styles.sectionStickerRight} alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/10_mirando_atras_colmillo.png" className={styles.sectionStickerLeft}  alt="" onError={e => e.currentTarget.remove()} />
 
         <div className={styles.container}>
-          {/* Título con gatito inline */}
           <p className={styles.sectionLabel}>Catálogo</p>
           <div className={styles.titleRow}>
             <h2 className={styles.sectionTitle}>Nuestras <em>piezas.</em></h2>
-            <img src="stickers/02_perfil_sentado.png" className={styles.titleSticker} alt="" onError={e => e.currentTarget.remove()} />
+            <img src="stickers/02_perfil_sentado_colmillo.png" className={styles.titleSticker} alt="" onError={e => e.currentTarget.remove()} />
           </div>
           <p className={styles.sectionSub}>
             Haz clic en cualquier producto para ver detalles y contactarnos por WhatsApp.
           </p>
 
-          {/* Filtros */}
           <div className={styles.filters}>
             <span className={styles.filterLbl}>Filtrar:</span>
             {CATEGORIES.map(cat => (
@@ -146,7 +122,6 @@ export default function App() {
             ))}
           </div>
 
-          {/* Grid */}
           <div className={styles.grid}>
             {filtered.map((product, i) => (
               <div key={product.id} className="anim-fade-up" style={{ animationDelay: `${i * 60}ms` }}>
@@ -164,10 +139,8 @@ export default function App() {
       <section id="personalizado" className={styles.customSection}>
         <div className={styles.container}>
           <div className={styles.customBox}>
-            {/* Gatito esquina inferior */}
-            <img src="stickers/07_posicion_pan.png" className={styles.customSticker}        alt="" onError={e => e.currentTarget.remove()} />
-            {/* Gatito extra esquina superior izquierda */}
-            <img src="stickers/05_durmiendo.png"    className={styles.customStickerTopLeft}  alt="" onError={e => e.currentTarget.remove()} />
+            <img src="stickers/07_posicion_pan_colmillo.png" className={styles.customSticker}       alt="" onError={e => e.currentTarget.remove()} />
+            <img src="stickers/05_durmiendo_colmillo.png"    className={styles.customStickerTopLeft} alt="" onError={e => e.currentTarget.remove()} />
 
             <div className={styles.customText}>
               <p className={styles.sectionLabelLight}>Tu diseño</p>
@@ -201,16 +174,13 @@ export default function App() {
 
       {/* ══════════ FOOTER ══════════ */}
       <footer className={styles.footer} id="footer">
-        {/* Gatito durmiendo fondo */}
-        <img src="stickers/05_durmiendo.png"  className={styles.footerSticker}      alt="" onError={e => e.currentTarget.remove()} />
-        {/* Gatito en caja esquina izquierda */}
-        <img src="stickers/14_en_caja.png"    className={styles.footerStickerLeft}   alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/05_durmiendo_colmillo.png" className={styles.footerSticker}     alt="" onError={e => e.currentTarget.remove()} />
+        <img src="stickers/14_cajita_colmillo.png"    className={styles.footerStickerLeft}  alt="" onError={e => e.currentTarget.remove()} />
 
         <div className={styles.footerGrid}>
           <div>
-            {/* Logo con imagen real en footer */}
             <div className={styles.footerLogoRow}>
-              <img src="stickers/01_frente_sentado.png" className={styles.footerCatImg} alt="Wilma Store" onError={e => e.currentTarget.remove()} />
+              <img src="stickers/01_frente_sentado_colmillo.png" className={styles.footerCatImg} alt="Wilma Store" onError={e => e.currentTarget.remove()} />
               <p className={styles.footerBrand}>Wilma <span>Store</span></p>
             </div>
             <p className={styles.footerTagline}>Crochet hecho a mano con amor desde Chile. Cada pieza es única, como tú.</p>
@@ -227,7 +197,7 @@ export default function App() {
           <div>
             <h6 className={styles.footerH}>Contacto</h6>
             <ul className={styles.footerList}>
-              <li><a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+              <li><a href="https://wa.me/56932489946" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
               <li>Instagram · @wilmastore</li>
               <li>Envíos a todo Chile</li>
               <li>Lun–Vie · 10:00–19:00</li>
@@ -240,8 +210,7 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Botón flotante WA */}
-      <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" className={styles.floatWa} aria-label="WhatsApp">
+      <a href="https://wa.me/56932489946" target="_blank" rel="noopener noreferrer" className={styles.floatWa} aria-label="WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>

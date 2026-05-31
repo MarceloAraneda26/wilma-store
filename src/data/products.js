@@ -1,11 +1,4 @@
-// ══════════════════════════════════════════
-// src/data/products.js
-// Fuente única de datos del catálogo.
-// Para agregar un producto: copia un objeto y edita sus campos.
-// Para agregar sticker: pon el PNG en /public/stickers/ y referencia acá.
-// ══════════════════════════════════════════
-
-export const WHATSAPP_NUMBER = '56932489946' // ← Número de Wilma (sin + ni espacios)
+export const WHATSAPP_NUMBER = '56932489946'
 
 export const CATEGORIES = [
   { id: 'all',       label: 'Todos'      },
@@ -15,7 +8,6 @@ export const CATEGORIES = [
   { id: 'otro',      label: 'Otros'      },
 ]
 
-// badge: 'new' | 'hot' | ''
 export const PRODUCTS = [
   {
     id: 1,
@@ -23,7 +15,7 @@ export const PRODUCTS = [
     category: 'scrunchie',
     emoji:    '🪻',
     bg:       '#EFE4F8',
-    sticker:  'gato-acurrucado.png',
+    sticker:  '02_perfil_sentado_colmillo.png',
     badge:    'new',
     price:    '$4.900',
     material: 'Lana pima 100%',
@@ -36,7 +28,7 @@ export const PRODUCTS = [
     category: 'diadema',
     emoji:    '🌿',
     bg:       '#D4EDD4',
-    sticker:  'gato-estirando.png',
+    sticker:  '06_estirandose_colmillo.png',
     badge:    'hot',
     price:    '$5.900',
     material: 'Algodón pima',
@@ -49,7 +41,7 @@ export const PRODUCTS = [
     category: 'scrunchie',
     emoji:    '🌸',
     bg:       '#F5E0EC',
-    sticker:  'gato-sentado.png',
+    sticker:  '01_frente_sentado_colmillo.png',
     badge:    'new',
     price:    '$4.500',
     material: 'Lana pima suave',
@@ -62,7 +54,7 @@ export const PRODUCTS = [
     category: 'set',
     emoji:    '🎀',
     bg:       '#FFF0E8',
-    sticker:  'gato-jugando.png',
+    sticker:  '13_ovillo_colmillo.png',
     badge:    'hot',
     price:    '$12.500',
     material: 'Lana pima 100%',
@@ -75,7 +67,7 @@ export const PRODUCTS = [
     category: 'scrunchie',
     emoji:    '🧶',
     bg:       '#F0E6D8',
-    sticker:  'gato-caminando.png',
+    sticker:  '03_caminando_lateral_colmillo.png',
     badge:    '',
     price:    '$6.200',
     material: 'Lana chunky gruesa',
@@ -88,7 +80,7 @@ export const PRODUCTS = [
     category: 'diadema',
     emoji:    '🌼',
     bg:       '#FFFAE0',
-    sticker:  'gato-saludando.png',
+    sticker:  '08_saludando_colmillo.png',
     badge:    'new',
     price:    '$7.500',
     material: 'Algodón pima · flores aplicadas',
@@ -101,7 +93,7 @@ export const PRODUCTS = [
     category: 'scrunchie',
     emoji:    '🩵',
     bg:       '#DCF0FF',
-    sticker:  'gato-espalda.png',
+    sticker:  '11_espalda_colmillo.png',
     badge:    '',
     price:    '$4.900',
     material: 'Lana merino suave',
@@ -114,7 +106,7 @@ export const PRODUCTS = [
     category: 'set',
     emoji:    '🎁',
     bg:       '#FFF0F5',
-    sticker:  'gato-parado.png',
+    sticker:  '09_parado_colmillo.png',
     badge:    '',
     price:    '$19.900',
     material: 'Lana pima mixta',
@@ -127,7 +119,7 @@ export const PRODUCTS = [
     category: 'otro',
     emoji:    '🪡',
     bg:       '#F5F0FF',
-    sticker:  'gato-caminando2.png',
+    sticker:  '12_caminando_colmillo.png',
     badge:    'new',
     price:    '$3.500',
     material: 'Pinza base + crochet algodón',
