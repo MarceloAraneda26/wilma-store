@@ -8,6 +8,17 @@ export const CATEGORIES = [
   { id: 'otro',      label: 'Otros'      },
 ]
 
+export const CATALOG_IMAGES = [
+  { src: 'catalogo/aurora_1.jpeg', alt: 'Scrunchie Aurora azul turquesa' },
+  { src: 'catalogo/aurora_2.jpeg', alt: 'Scrunchie Aurora fucsia' },
+  { src: 'catalogo/aurora_3.jpeg', alt: 'Scrunchie Aurora multicolor' },
+  { src: 'catalogo/aurora_4.jpeg', alt: 'Scrunchie Aurora rosado' },
+  { src: 'catalogo/aurora_5.jpeg', alt: 'Scrunchie Aurora morado' },
+  { src: 'catalogo/aurora_6.jpeg', alt: 'Scrunchie Aurora gris' },
+  { src: 'catalogo/aurora_7.jpeg', alt: 'Scrunchie Aurora cafe' },
+  { src: 'catalogo/aurora_8.jpeg', alt: 'Scrunchie Aurora coral' },
+]
+
 export const PRODUCTS = [
   {
     id: 1,
@@ -15,6 +26,7 @@ export const PRODUCTS = [
     category: 'scrunchie',
     emoji:    '🪻',
     bg:       '#EFE4F8',
+    image:    'catalogo/aurora_5.jpeg',
     sticker:  '02_perfil_sentado_colmillo.png',
     badge:    'new',
     price:    '$4.900',
@@ -28,6 +40,7 @@ export const PRODUCTS = [
     category: 'diadema',
     emoji:    '🌿',
     bg:       '#D4EDD4',
+    image:    'catalogo/aurora_3.jpeg',
     sticker:  '06_estirandose_colmillo.png',
     badge:    'hot',
     price:    '$5.900',
@@ -41,6 +54,7 @@ export const PRODUCTS = [
     category: 'scrunchie',
     emoji:    '🌸',
     bg:       '#F5E0EC',
+    image:    'catalogo/aurora_4.jpeg',
     sticker:  '01_frente_sentado_colmillo.png',
     badge:    'new',
     price:    '$4.500',
@@ -54,6 +68,7 @@ export const PRODUCTS = [
     category: 'set',
     emoji:    '🎀',
     bg:       '#FFF0E8',
+    image:    'catalogo/aurora_8.jpeg',
     sticker:  '13_ovillo_colmillo.png',
     badge:    'hot',
     price:    '$12.500',
@@ -67,6 +82,7 @@ export const PRODUCTS = [
     category: 'scrunchie',
     emoji:    '🧶',
     bg:       '#F0E6D8',
+    image:    'catalogo/aurora_7.jpeg',
     sticker:  '03_caminando_lateral_colmillo.png',
     badge:    '',
     price:    '$6.200',
@@ -80,6 +96,7 @@ export const PRODUCTS = [
     category: 'diadema',
     emoji:    '🌼',
     bg:       '#FFFAE0',
+    image:    'catalogo/aurora_2.jpeg',
     sticker:  '08_saludando_colmillo.png',
     badge:    'new',
     price:    '$7.500',
@@ -93,6 +110,7 @@ export const PRODUCTS = [
     category: 'scrunchie',
     emoji:    '🩵',
     bg:       '#DCF0FF',
+    image:    'catalogo/aurora_1.jpeg',
     sticker:  '11_espalda_colmillo.png',
     badge:    '',
     price:    '$4.900',
@@ -106,6 +124,7 @@ export const PRODUCTS = [
     category: 'set',
     emoji:    '🎁',
     bg:       '#FFF0F5',
+    image:    'catalogo/aurora_6.jpeg',
     sticker:  '09_parado_colmillo.png',
     badge:    '',
     price:    '$19.900',

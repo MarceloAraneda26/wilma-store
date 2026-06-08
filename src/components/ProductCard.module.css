@@ -2,12 +2,16 @@
 
 .card {
   position: relative;
+  display: block;
+  width: 100%;
   background: var(--white);
   border: 1.5px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-card);
   cursor: pointer;
+  color: var(--text);
+  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
@@ -27,7 +31,7 @@
 /* Imagen */
 .imgWrap {
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   display: flex; align-items: center; justify-content: center;
 }
@@ -37,6 +41,14 @@
   transition: transform 1.4s cubic-bezier(.22,.61,.36,1);
 }
 .card:hover .sticker { transform: scale(1.08) rotate(-3deg); }
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.4s cubic-bezier(.22,.61,.36,1);
+}
+.card:hover .photo { transform: scale(1.035); }
 
 .emojiFallback {
   font-size: 72px;

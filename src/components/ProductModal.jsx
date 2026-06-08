@@ -13,6 +13,8 @@ export default function ProductModal({ product, onClose }) {
 
   const waUrl = buildWaUrl(product.name)
   const qrUrl = buildQrUrl(product.name)
+  const imageSrc = product.image || `stickers/${product.sticker}`
+  const imageClass = product.image ? styles.productPhoto : styles.stickerImg
 
   return (
     <div
@@ -23,17 +25,16 @@ export default function ProductModal({ product, onClose }) {
       aria-label={product.name}
     >
       <div className={`${styles.modal} anim-scale-in`}>
-        <button className={styles.close} onClick={onClose} aria-label="Cerrar">✕</button>
+        <button className={styles.close} onClick={onClose} aria-label="Cerrar" autoFocus>✕</button>
 
-        {/* Imagen lateral */}
         <div className={styles.imgSide} style={{ background: product.bg }}>
           <img
-            src={`stickers/${product.sticker}`}
+            src={imageSrc}
             alt={product.name}
-            className={styles.stickerImg}
+            className={imageClass}
             onError={(e) => {
               e.currentTarget.style.display = 'none'
-              e.currentTarget.nextSibling.style.display = 'flex'
+              e.currentTarget.nextElementSibling.style.display = 'flex'
             }}
           />
           <div className={styles.emojiFallback} style={{ display: 'none' }}>
@@ -41,7 +42,6 @@ export default function ProductModal({ product, onClose }) {
           </div>
         </div>
 
-        {/* Contenido */}
         <div className={styles.content}>
           <p className={styles.cat}>{product.category}</p>
           <h2 className={styles.name}>{product.name}</h2>
@@ -60,7 +60,6 @@ export default function ProductModal({ product, onClose }) {
 
           <p className={styles.price}>{product.price}</p>
 
-          {/* Acciones */}
           <div className={styles.actions}>
             <a href={waUrl} target="_blank" rel="noopener noreferrer" className={styles.waBtn}>
               {WA_ICON} Consultar por WhatsApp

@@ -9,23 +9,24 @@ const BADGE = {
 
 export default function ProductCard({ product, onClick }) {
   const badge = BADGE[product.badge]
+  const imageSrc = product.image || `stickers/${product.sticker}`
+  const imageClass = product.image ? styles.photo : styles.sticker
 
   return (
-    <article className={styles.card} onClick={() => onClick(product)}>
+    <button type="button" className={styles.card} onClick={() => onClick(product)}>
       {badge && (
         <span className={`${styles.badge} ${badge.cls}`}>{badge.label}</span>
       )}
 
-      {/* Imagen / Sticker */}
       <div className={styles.imgWrap} style={{ background: product.bg }}>
         <img
-          src={`stickers/${product.sticker}`}
+          src={imageSrc}
           alt={product.name}
-          className={styles.sticker}
+          className={imageClass}
+          loading="lazy"
           onError={(e) => {
-            // Fallback: muestra emoji si el sticker no existe
             e.currentTarget.style.display = 'none'
-            e.currentTarget.nextSibling.style.display = 'flex'
+            e.currentTarget.nextElementSibling.style.display = 'flex'
           }}
         />
         <div className={styles.emojiFallback} style={{ display: 'none' }}>
@@ -36,7 +37,6 @@ export default function ProductCard({ product, onClick }) {
         </div>
       </div>
 
-      {/* Info */}
       <div className={styles.body}>
         <p className={styles.cat}>{product.category}</p>
         <h3 className={styles.name}>{product.name}</h3>
@@ -45,6 +45,6 @@ export default function ProductCard({ product, onClick }) {
           {product.price} <span>· consultar disponibilidad</span>
         </p>
       </div>
-    </article>
+    </button>
   )
 }
