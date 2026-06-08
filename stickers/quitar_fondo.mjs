@@ -2,10 +2,11 @@
 // Elimina el fondo blanco de todos los stickers PNG
 // USO: node quitar_fondo.mjs
 
-import { readdir, readFile, writeFile } from 'fs/promises'
-import { join } from 'path'
+import { readdir } from 'fs/promises'
+import { dirname, join } from 'path'
+import { fileURLToPath } from 'url'
 
-const STICKERS_DIR = String.raw`C:\Users\marce\Desktop\wilma-store\wilma-store\public\stickers`
+const STICKERS_DIR = dirname(fileURLToPath(import.meta.url))
 const TOLERANCIA = 30
 
 // Instalar sharp si no está: npm install sharp
